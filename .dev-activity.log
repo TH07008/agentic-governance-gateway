@@ -226,3 +226,4 @@
 2024-12-29T09:34:03.000Z | Fix failing test case
 2024-12-30T15:34:54.000Z | Add loading spinner
 2024-12-30T07:01:23.000Z | Update package version
+2024-12-31T10:02:59.000Z | Format code with prettier
