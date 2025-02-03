@@ -275,3 +275,4 @@
 2025-01-31T10:59:31.000Z | Update package version
 2025-01-31T12:16:45.000Z | Fix CSS styling bugs
 2025-02-01T11:15:58.000Z | Optimise rendering performance
+2025-02-03T11:51:07.000Z | Fix memory leak in cache
