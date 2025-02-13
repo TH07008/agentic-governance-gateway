@@ -296,3 +296,4 @@
 2025-02-12T10:56:29.000Z | Fix memory leak in cache
 2025-02-12T13:23:11.000Z | Add new feature
 2025-02-13T09:33:00.000Z | Update package version
+2025-02-13T12:17:24.000Z | Update Dockerfile
