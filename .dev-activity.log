@@ -384,3 +384,4 @@
 2025-04-08T09:30:54.000Z | Remove deprecated methods
 2025-04-08T09:51:17.000Z | Update webpack config
 2025-04-09T11:29:47.000Z | Improve error handling
+2025-04-09T10:11:14.000Z | Fix broken links in docs
