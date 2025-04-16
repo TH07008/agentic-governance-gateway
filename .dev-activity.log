@@ -393,3 +393,4 @@
 2025-04-13T08:20:52.000Z | Add .gitignore
 2025-04-16T12:32:26.000Z | Add export to CSV
 2025-04-16T12:17:37.000Z | Fix typo in documentation
+2025-04-16T12:15:08.000Z | Improve error handling
