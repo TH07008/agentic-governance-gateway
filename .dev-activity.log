@@ -457,3 +457,4 @@
 2025-05-24T17:28:51.000Z | Chore: update configs
 2025-05-27T10:55:37.000Z | Improve error handling
 2025-05-27T10:57:13.000Z | Update copyright year
+2025-05-28T08:09:48.000Z | Fix memory leak in cache
