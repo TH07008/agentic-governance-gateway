@@ -527,3 +527,4 @@
 2025-07-07T13:07:46.000Z | Add new feature
 2025-07-09T14:28:52.000Z | Update package version
 2025-07-09T09:54:43.000Z | Add environment variables support
+2025-07-09T14:51:09.000Z | Fix broken API endpoint
