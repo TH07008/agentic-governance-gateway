@@ -756,3 +756,4 @@
 2025-11-26T10:53:54.000Z | Update package version
 2025-11-26T14:04:27.000Z | Fix bug in parser
 2025-11-26T06:48:42.000Z | Add environment variables support
+2025-11-27T11:16:01.000Z | Add loading spinner
