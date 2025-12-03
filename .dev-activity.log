@@ -763,3 +763,4 @@
 2025-12-02T10:28:09.000Z | Update CI configuration
 2025-12-02T13:40:42.000Z | Add environment variables support
 2025-12-03T13:32:46.000Z | Add export to CSV
+2025-12-03T11:24:15.000Z | Refactor component structure
