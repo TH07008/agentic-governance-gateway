@@ -1087,3 +1087,4 @@
 2026-06-23T06:55:40.000Z | Add tooltip component
 2026-06-23T13:37:11.000Z | Add export to CSV
 2026-06-24T13:42:49.000Z | Update Dockerfile
+2026-06-24T10:45:25.000Z | Fix date formatting
