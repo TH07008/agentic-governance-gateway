@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "agentic-governance-gateway": {
+      "command": "node",
+      "args": ["/absolute/path/to/agentic-governance-gateway/dist/mcp/main.js"],
+      "env": {
+        "POLICY_FALLBACK_JS": "true",
+        "DEFAULT_DAILY_BUDGET_USD": "50",
+        "DEFAULT_MONTHLY_BUDGET_USD": "1000",
+        "HITL_TIMEOUT_SECONDS": "300",
+        "LOG_LEVEL": "info"
+      }
+    }
+  }
+}

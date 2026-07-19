@@ -1,0 +1,15 @@
+services:
+  gateway:
+    build: .
+    image: agentic-governance-gateway:0.1.0
+    environment:
+      - LOG_LEVEL=info
+      - POLICY_FALLBACK_JS=true
+      - DEFAULT_DAILY_BUDGET_USD=50
+      - DEFAULT_MONTHLY_BUDGET_USD=1000
+      - HITL_TIMEOUT_SECONDS=300
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./policies:/app/policies:ro
+    restart: unless-stopped

@@ -1,0 +1,76 @@
+{
+  "name": "agentic-governance-gateway",
+  "version": "0.1.0",
+  "description": "An open-source governance gateway for agentic coding in enterprise environments. Sits between coding agents and your systems to enforce policies, log provenance, orchestrate validation, and keep humans in the loop.",
+  "license": "MIT",
+  "author": "Agentic Governance Contributors",
+  "type": "module",
+  "keywords": [
+    "agentic-coding",
+    "governance",
+    "policy-as-code",
+    "opa",
+    "rego",
+    "mcp",
+    "model-context-protocol",
+    "traceability",
+    "human-in-the-loop",
+    "ai-governance"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "policies",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "bin": {
+    "agentic-gateway": "dist/cli/index.js",
+    "agentic-gateway-mcp": "dist/mcp/server.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "clean": "rimraf dist coverage .nyc_output",
+    "dev": "tsx watch src/mcp/server.ts",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"policies/**/*.rego\"",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "test:e2e": "vitest run tests/e2e",
+    "test:rego": "opa test policies/ -v",
+    "test": "npm run test:unit && npm run test:integration && npm run test:e2e && npm run test:rego",
+    "test:coverage": "vitest run --coverage",
+    "start:mcp": "node dist/mcp/server.js",
+    "start:api": "node dist/api/server.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "pg": "^8.13.1",
+    "zod": "^3.23.8",
+    "uuid": "^10.0.0",
+    "pino": "^9.5.0"
+  },
+  "optionalDependencies": {
+    "@open-policy-agent/opa-wasm": "^0.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/pg": "^8.11.10",
+    "@types/uuid": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.18.1",
+    "@typescript-eslint/parser": "^8.18.1",
+    "@vitest/coverage-v8": "^2.1.8",
+    "eslint": "^9.17.0",
+    "prettier": "^3.4.2",
+    "rimraf": "^6.0.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
