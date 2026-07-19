@@ -68,7 +68,6 @@ async function main(): Promise<void> {
 }
 
 main().catch((err) => {
-  // eslint-disable-next-line no-console
   console.error("agentic-governance-gateway: fatal", err);
   process.exit(1);
 });

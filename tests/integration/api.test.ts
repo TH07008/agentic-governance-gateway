@@ -1,5 +1,5 @@
 import { describe, it, expect, afterAll, beforeAll } from "vitest";
-import { createServer, type Server } from "node:http";
+import { type Server } from "node:http";
 import { PolicyEngine } from "../../src/core/policy-engine/engine.js";
 import { MemoryTraceStore } from "../../src/core/traceability/store.js";
 import { MemoryBudgetStore, BudgetController } from "../../src/core/budget/controller.js";

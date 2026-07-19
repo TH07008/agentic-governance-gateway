@@ -41,14 +41,12 @@ async function main(): Promise<void> {
   const logger = createLogger("warn");
 
   if (command === "help" || command === "--help") {
-    // eslint-disable-next-line no-console
     console.log(HELP_TEXT);
     return;
   }
 
   if (command === "policies") {
     for (const rule of builtInRules) {
-      // eslint-disable-next-line no-console
       console.log(`${rule.severity.toUpperCase().padEnd(6)} ${rule.id}  ${rule.description}`);
     }
     return;
@@ -60,7 +58,6 @@ async function main(): Promise<void> {
       fallbackToJsEvaluator: cfg.fallbackToJsEvaluator,
       logger,
     });
-    // eslint-disable-next-line no-console
     console.log(JSON.stringify({ evaluator: engine.evaluatorName, config: cfg }, null, 2));
     return;
   }
@@ -102,7 +99,6 @@ async function main(): Promise<void> {
     const snapshot = await budgetStore.getSnapshot(action.agentId);
     const ctx = buildContext(action, { dailyCostUsd: snapshot.dailyCostUsd, monthlyCostUsd: snapshot.monthlyCostUsd }, Number(opts.iteration ?? 0));
     const decision = await engine.evaluate(action, { dailyCostUsd: snapshot.dailyCostUsd, monthlyCostUsd: snapshot.monthlyCostUsd }, Number(opts.iteration ?? 0));
-    // eslint-disable-next-line no-console
     console.log(
       JSON.stringify(
         {
@@ -117,7 +113,6 @@ async function main(): Promise<void> {
     process.exit(decision.action === "deny" ? 2 : 0);
   }
 
-  // eslint-disable-next-line no-console
   console.error(`Unknown command: ${command}\n\n${HELP_TEXT}`);
   process.exit(64);
 }
@@ -148,7 +143,6 @@ Exit codes:
 `;
 
 main().catch((err) => {
-  // eslint-disable-next-line no-console
   console.error("agentic-gateway:", err);
   process.exit(1);
 });

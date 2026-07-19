@@ -5,7 +5,7 @@ import {
   PolicyEvaluator,
   rank,
 } from "../../src/core/policy-engine/evaluator.js";
-import type { AgentAction, GovernanceDecision, PolicyContext } from "../../src/types/index.js";
+import type { GovernanceDecision, PolicyContext } from "../../src/types/index.js";
 import { makeAction } from "../../src/core/traceability/store.js";
 
 class Stub implements PolicyEvaluator {

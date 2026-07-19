@@ -31,12 +31,12 @@
   ],
   "bin": {
     "agentic-gateway": "dist/cli/index.js",
-    "agentic-gateway-mcp": "dist/mcp/server.js"
+    "agentic-gateway-mcp": "dist/mcp/main.js"
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "clean": "rimraf dist coverage .nyc_output",
-    "dev": "tsx watch src/mcp/server.ts",
+    "dev": "tsx watch src/mcp/main.ts",
     "lint": "eslint . --ext .ts",
     "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"policies/**/*.rego\"",
     "test:unit": "vitest run tests/unit",
@@ -45,7 +45,7 @@
     "test:rego": "opa test policies/ -v",
     "test": "npm run test:unit && npm run test:integration && npm run test:e2e && npm run test:rego",
     "test:coverage": "vitest run --coverage",
-    "start:mcp": "node dist/mcp/server.js",
+    "start:mcp": "node dist/mcp/main.js",
     "start:api": "node dist/api/server.js",
     "typecheck": "tsc --noEmit"
   },
